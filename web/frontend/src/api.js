@@ -1,4 +1,4 @@
-const BASE = '/api';
+const BASE = import.meta.env.VITE_API_URL || '/api';
 
 const j = async (path, opts) => {
   const r = await fetch(BASE + path, { headers: { 'Content-Type': 'application/json' }, ...opts });
